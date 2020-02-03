@@ -12,7 +12,7 @@ https://www.h2database.com 에서 다운로드 받은 설치파일의 압축을 
 http://192.168.0.2:8082/login.jsp?jsessionid=c548f5735cffb777c350f7ca596401bc <br/>
 => http://localhost:8082/login.jsp?jsessionid=c548f5735cffb777c350f7ca596401bc <br/>
 <br/>
-JDBC URL에 'jdbc:h2:~/jpashop' 설정.<br/>
+JDBC URL에 'jdbc:h2:~/jpashop' 설정.(디비 파일을 생성하기 위함.)<br/>
 (끝부분의 '~/jpashop'(~는 홈디렉토리 => /Users/sombrero104/jpashop)는 디비 파일이 생성될 경로이다.)<br/>
 콘솔에서 설정 후 연결 버튼을 누르면 /Users/sombrero104/ 경로에 jpashop.mv.db 파일이 생성된다.<br/>
 <br/><br/>
