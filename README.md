@@ -1,6 +1,6 @@
 # jpashop
-
-
+Spring Boot, JPA, Thymeleaf<br/>
+<br/>
 
 
 ### H2 데이터베이스 설정
