@@ -20,8 +20,3 @@ JDBC URL에 'jdbc:h2:~/jpashop' 설정.(파일 모드 접근. 디비 파일을 �
 
 디비 파일이 생성된 이후에는 JDBC URL을 'jdbc:h2:tcp://localhost/~/jpashop'로 바꿔서 연결해서 사용한다.(네트워크 모드 접근)<br/>
 </pre>
-<br/>
-
-
-
-
