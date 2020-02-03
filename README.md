@@ -2,6 +2,11 @@
 Spring Boot, JPA, Thymeleaf<br/>
 <br/>
 
+### Lombok 설정
+롬복 설치 후..<br/>
+Preferences > Build, Execution, Deployment > Compiler > Annotation Processors 에서<br/>
+‘Enable annotation processing’ 체크.<br/>
+<br/>
 
 ### H2 데이터베이스 설정
 보안상의 이유로 h2를 설치해야만 콘솔을 실행할 수 있게 되었다.<br/>
