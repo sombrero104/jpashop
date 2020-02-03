@@ -25,3 +25,9 @@ JDBC URL에 'jdbc:h2:~/jpashop' 설정.(파일 모드 접근. 디비 파일을 �
 
 디비 파일이 생성된 이후에는 JDBC URL을 'jdbc:h2:tcp://localhost/~/jpashop'로 바꿔서 연결해서 사용한다.(네트워크 모드 접근)<br/>
 </pre>
+
+### jar로 실행(gradle로 빌드한 스프링부트 어플리케이션 jar 파일을 콘솔에서 띄우기.)
+/Users/sombrero104/IdeaProjects/jpashop 에서 './gradlew clean build' 실행.<br/>
+/Users/sombrero104/IdeaProjects/jpashop/build/libs/jpashop-0.0.1-SNAPSHOT.jar 파일이 생성됨.<br/>
+'java -jar jpashop-0.0.1-SNAPSHOT.jar'로 실행하면 어플리케이션이 실행됨.<br/>
+<br/>
