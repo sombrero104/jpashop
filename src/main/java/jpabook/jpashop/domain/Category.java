@@ -26,7 +26,10 @@ public class Category {
      * (실무에서는 등록 날짜 등 다른 데이터들이 더 많기 때문에 매핑테이블로 해결이 안되는 경우가 많음.)
      */
     @ManyToMany
-    @JoinTable(name = "category_item")
+    @JoinTable(name = "category_item",
+            joinColumns = @JoinColumn(name = "category_id"),
+            inverseJoinColumns = @JoinColumn(name = "item_id")
+    )
     private List<Item> items = new ArrayList<>();
 
 }
