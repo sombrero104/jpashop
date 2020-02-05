@@ -22,8 +22,11 @@ public class Member {
 
     /**
      * Order와 양방향 연관관계
+     * Order가 연관관계의 주인이므로,
+     * 연관관계의 주인이 아닌 Member에는 mappedBy를 선언해준다.
+     * 나는 Order 테이블에 있는 member 필드에 의해서 매핑된 거울일뿐이라는 의미.
      */
-    @OneToMany
+    @OneToMany(mappedBy = "member")
     private List<Order> orders = new ArrayList<>();
 
 }
