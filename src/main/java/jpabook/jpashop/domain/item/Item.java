@@ -1,9 +1,12 @@
 package jpabook.jpashop.domain.item;
 
+import jpabook.jpashop.domain.Category;
 import lombok.Getter;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Inheritance 전략 종류
@@ -20,6 +23,7 @@ import javax.persistence.*;
  */
 @Entity
 @Inheritance(strategy = InheritanceType.SINGLE_TABLE)
+@DiscriminatorColumn(name = "dtype") // 싱글테이블 내에서 Movie , Music , Book을 구분하기 위한 값.
 @Getter @Setter
 public abstract class Item {
 
@@ -32,5 +36,7 @@ public abstract class Item {
     private int price;
 
     private int stockQuantity;
+
+    private List<Category> categories = new ArrayList<>();
 
 }
