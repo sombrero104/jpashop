@@ -45,4 +45,9 @@ JDBC URL에 'jdbc:h2:~/jpashop' 설정.(파일 모드 접근. 디비 파일을 �
 (예를 들어 Order가 100건일 경우 Order 100건을 가져온 후에 연관된 Member를 가져오기 위해 100개의 쿼리를 한번 더 날린다. N+1 => 100+1)<br/>
 실무에서 모든 연관관계는 지연로딩(LAZY)으로 설정해야 한다.<br/>
 연관된 엔티티를 함께 DB에서 조회해야 하면, fetch join 또는 엔티티 그래프 기능을 사용한다.<br/>
+@XToOne(OneToOne, ManyToOne) 관계는 기본이 즉시로딩(EAGER)이므로 직접 지연로딩(LAZY)으로 설정해야 한다.<br/>
+<pre>
+@ManyToOne(fetch = FetchType.LAZY)
+@OneToOne(fetch = FetchType.LAZY)
+</pre>
 <br/>
