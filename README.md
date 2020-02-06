@@ -76,6 +76,7 @@ class org.hibernate.collection.internal.PersistentBag
 1. 카멜 케이스 => 언더스코어(memberPoint member_point) <br/>
 2. .(점) => _(언더스코어)<br/>
 3. 대문자 => 소문자<br/>
+<br/>
 http://docs.jboss.org/hibernate/orm/5.4/userguide/html_single/Hibernate_User_Guide.html#naming<br/>
 https://docs.spring.io/spring-boot/docs/2.1.3.RELEASE/reference/htmlsingle/#howto-configure-hibernate-naming-strategy<br/>
 <br/><br/>
