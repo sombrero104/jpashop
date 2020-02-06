@@ -26,7 +26,14 @@ public class Order {
     @JoinColumn(name = "member_id")
     private Member member;
 
-    @OneToMany(mappedBy = "order")
+    /**
+     * cascade = CascadeType.ALL 옵션은
+     * persist(oderItemA); persist(orderItemB); persist(orderItemC); persist(order);
+     * 처럼 orderItem을 따로 저장하지 않고
+     * persist(order);
+     * 만 입력해도 orderItem도 다 같이 저장해 준다.
+     */
+    @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
     private List<OrderItem> orderItems = new ArrayList<>();
 
     @OneToOne(fetch = FetchType.LAZY)
