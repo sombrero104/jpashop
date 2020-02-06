@@ -36,6 +36,7 @@ public class MemberService {
      * 회원 전체 조회
      * 조회용 메소드는 'readOnly = true' 옵션으로 성능 최적화.
      * 클래스에 선언하고 읽기용이 아닌 곳에만 @Transactional를 선언해줘도 된다.
+     * 클래스에 선언하면 기본적으로 public인 메소드에는 다 적용된다.
      */
     // @Transactional(readOnly = true)
     public List<Member> findMembers() {
