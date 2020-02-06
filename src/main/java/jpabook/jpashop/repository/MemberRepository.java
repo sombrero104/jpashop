@@ -26,7 +26,7 @@ public class MemberRepository {
      * @RequiredArgsConstructor 어노테이션 사용.
      * 스프링부트에서는 @PersistenceContext가 아닌 @Autowired로도 EntityManager의 injection을 지원하기 때문에
      * EntityManager도 @RequiredArgsConstructor를 사용할 수 있다.
-     * (설명은 MemberService 클래스 참조.)
+     * (@RequiredArgsConstructor에 관한 설명은 MemberService 클래스 참조.)
      */
     private final EntityManager em;
 
