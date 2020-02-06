@@ -74,7 +74,8 @@ class org.hibernate.collection.internal.PersistentBag
 http://docs.jboss.org/hibernate/orm/5.4/userguide/html_single/Hibernate_User_Guide.html#naming<br/>
 https://docs.spring.io/spring-boot/docs/2.1.3.RELEASE/reference/htmlsingle/#howto-configure-hibernate-naming-strategy<br/>
 <br/>
-#### 스프링 부트 신규 설정 (엔티티(필드) => 테이블(컬럼))<br/>
+#### 스프링 부트 신규 설정
+(엔티티(필드) => 테이블(컬럼))<br/>
 1. 카멜 케이스 => 언더스코어(memberPoint member_point) <br/>
 2. .(점) => _(언더스코어)<br/>
 3. 대문자 => 소문자<br/>
