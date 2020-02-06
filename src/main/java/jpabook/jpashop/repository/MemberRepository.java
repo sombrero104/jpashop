@@ -1,6 +1,7 @@
 package jpabook.jpashop.repository;
 
 import jpabook.jpashop.domain.Member;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 
 import javax.persistence.EntityManager;
@@ -10,15 +11,26 @@ import javax.persistence.PersistenceUnit;
 import java.util.List;
 
 @Repository
+@RequiredArgsConstructor
 public class MemberRepository {
 
     /**
      * @PersistenceContext 를 붙이면
      * 스프링부트가 자동으로 EntityManager를 주입해줌.
+     * 스프링부트에서는 @Autowired로도 사용 가능하다.
      */
-    @PersistenceContext
-    private EntityManager em;
+    /*@PersistenceContext
+    private EntityManager em;*/
 
+    /**
+     * @RequiredArgsConstructor 어노테이션 사용.
+     * (설명은 MemberService 클래스 참조.)
+     */
+    private final EntityManager em;
+
+    /**
+     * 만약, EntityManagerFactory를 주입받고 싶을 경우.
+     */
     /*@PersistenceUnit
     private EntityManagerFactory emf;*/
 
