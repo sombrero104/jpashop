@@ -50,4 +50,20 @@ JDBC URL에 'jdbc:h2:~/jpashop' 설정.(파일 모드 접근. 디비 파일을 �
 @ManyToOne(fetch = FetchType.LAZY)
 @OneToOne(fetch = FetchType.LAZY)
 </pre>
-<br/>
+
+### 컬렉션은 필드에서 초기화하자!
+컬렉션은 필드에서 바로 초기화 하는 것이 안전하다.<br/>
+null 문제에서 안전하다.<br/>
+하이버네이트는 엔티티를 영속화 할 때, 컬랙션을 감싸서 하이버네이트가 제공하는 내장 컬렉션으로 변경한다. <br/>
+만약 getOrders() 처럼 임의의 메서드에서 컬력션을 잘못 생성하면 하이버네이트 내부 메커니즘에 문제가 발생할 수 있다. <br/>
+따라서 필드레벨에서 생성하는 것이 가장 안전하고, 코드도 간결하다.<br/>
+<pre>
+Member member = new Member();
+System.out.println(member.getOrders().getClass());
+em.persist(team);
+System.out.println(member.getOrders().getClass());
+//출력 결과
+class java.util.ArrayList
+class org.hibernate.collection.internal.PersistentBag
+</pre>
+
