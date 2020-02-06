@@ -30,7 +30,13 @@ public class MemberRepository {
      * SQL는 테이블을 대상으로 쿼리를 하고, JPQL은 엔티티를 대상으로 쿼리를 한다.
      */
     public List<Member> findAll() {
-        return em.createQuery("select m from Member m", Member.class)
+        return em.createQuery("select m from Member m", Member.class) // 조회 타입은 Member.class
+                .getResultList();
+    }
+
+    public List<Member> findByName(String name) {
+        return em.createQuery("select m from Member m where m.name = :name", Member.class)
+                .setParameter("name", name)
                 .getResultList();
     }
 
