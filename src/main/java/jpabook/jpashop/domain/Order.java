@@ -46,4 +46,20 @@ public class Order {
     @Enumerated(EnumType.STRING)
     private OrderStatus status; // 주문상태 [ORDER, CANCEL]
 
+    /**
+     * Order order = new Order();
+     * Member member = new Member();
+     *
+     * order.setMember(member);         // (1)
+     * member.getOrders().add(order);   // (2)
+     *
+     * 에서 (2)를 실수로 빠뜨릴 수도 있다.
+     * 그래서 (1)과 (2)를 묶어준다.
+     */
+    // 연관관계 메서드
+    public void setMember(Member member) {
+        this.member = member;
+        member.getOrders().add(this);
+    }
+
 }
