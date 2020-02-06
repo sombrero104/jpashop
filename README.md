@@ -24,18 +24,18 @@ JDBC URL에 'jdbc:h2:~/jpashop' 설정.(파일 모드 접근. 디비 파일을 �
 콘솔에서 JDBC URL 설정 후 연결 버튼을 누르면 /Users/sombrero104/ 경로에 jpashop.mv.db 파일이 생성된다.<br/>
 
 디비 파일이 생성된 이후에는 JDBC URL을 'jdbc:h2:tcp://localhost/~/jpashop'로 바꿔서 연결해서 사용한다.(네트워크 모드 접근)<br/>
-</pre>
+</pre><br/>
 
 ### jar로 실행(gradle로 빌드한 스프링부트 어플리케이션 jar 파일을 콘솔에서 띄우기.)
 /Users/sombrero104/IdeaProjects/jpashop 에서 './gradlew clean build' 실행.<br/>
 /Users/sombrero104/IdeaProjects/jpashop/build/libs/jpashop-0.0.1-SNAPSHOT.jar 파일이 생성됨.<br/>
 'java -jar jpashop-0.0.1-SNAPSHOT.jar'로 실행하면 어플리케이션이 실행됨.<br/>
-<br/>
+<br/><br/>
 
 ### 연관관계의 주인
 연관관계에 있는 두 엔티티가 있을 때, 외래키가 변경될 경우, <br/>
 어떤 엔티티의 값을 기준으로 변경할 것인지에 대해 기준이 되는 엔티티를 연관관계의 주인이라고 한다.<br/>
-<br/>
+<br/><br/>
 
 ### 모든 연관관계는 지연로딩으로 설정!
 #### * 즉시로딩(EAGER)
@@ -49,7 +49,7 @@ JDBC URL에 'jdbc:h2:~/jpashop' 설정.(파일 모드 접근. 디비 파일을 �
 <pre>
 @ManyToOne(fetch = FetchType.LAZY)
 @OneToOne(fetch = FetchType.LAZY)
-</pre>
+</pre><br/>
 
 ### 컬렉션은 필드에서 초기화하자!
 컬렉션은 필드에서 바로 초기화 하는 것이 안전하다.<br/>
@@ -65,5 +65,5 @@ System.out.println(member.getOrders().getClass());
 //출력 결과
 class java.util.ArrayList
 class org.hibernate.collection.internal.PersistentBag
-</pre>
+</pre><br/>
 
