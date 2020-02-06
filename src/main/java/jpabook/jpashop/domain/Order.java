@@ -47,7 +47,7 @@ public class Order {
     private OrderStatus status; // 주문상태 [ORDER, CANCEL]
 
     /**
-     * 연관관계 편의 메서드
+     * [연관관계 편의 메서드]
      * ----------------------------------------
      * Order order = new Order();
      * Member member = new Member();
