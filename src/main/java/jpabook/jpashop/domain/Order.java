@@ -32,11 +32,12 @@ public class Order {
      * 처럼 orderItem을 따로 저장하지 않고
      * persist(order);
      * 만 입력해도 orderItem도 다 같이 저장해 준다.
+     * ALL옵션은 삭제시에도 같이 삭제해 준다.
      */
     @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
     private List<OrderItem> orderItems = new ArrayList<>();
 
-    @OneToOne(fetch = FetchType.LAZY)
+    @OneToOne(fetch = FetchType.LAZY, cascade = CascadeType.ALL)
     @JoinColumn(name = "delivery_id")
     private Delivery delivery;
 
